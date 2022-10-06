@@ -28,7 +28,11 @@ p{
 
 .lista{
     margin-top: 50px;
-    width: 450px;
+    max-width: 450px;
+}
+
+.direita{
+    padding-right: 70px;
 }
 
 ul{
@@ -51,26 +55,29 @@ li{
 
 .foto{
     float: right;
-    width: 450px;
-    height: 371px;
+    max-width: 450px;
+    max-height: 371px;
+    position: relative;
 
     border-radius: 0 10px 10px 0;
 }
 
+
 .camada{
-    width: 450px;
-    height: 371px;
+    width: 100%;
+    height: 100%;
+
     background-color: hsla(277, 83%, 37%, 0.623);
     position: absolute;
-    left: 55%;
     border-radius: 0 10px 10px 0;
 
 }
 
 .card{
     position: relative;
-    width: 1000px;
+    max-width: 1000px;
     height: 371px;
+    margin: 0 10px 0 10px;
     background-color: hsl(244, 38%, 16%);
 
     top: 50%;
@@ -82,6 +89,66 @@ li{
 
 .content{
     float: left;
-    width: 370px;
-    margin: 50px 10px 50px 60px;
+    max-width: 370px;
+    max-height: 271px;
+    margin: 50px 0px 50px 60px;
+}
+
+@media (max-width: 500px) {
+
+    .card{
+        width: 320px;
+        height: 750px;
+    }
+
+    h1{
+        font-size: 27px;
+    }
+    p{
+        margin-top: 10px;
+        line-height: 23px;
+    }
+
+
+    .foto{
+        clear: both;
+        width: 320px;
+        position: relative;
+    
+        border-radius: 10px 10px 0 0;
+    }
+    
+    .camada{
+    width: 100%;
+    height: 100%;
+
+    background-color: hsla(277, 83%, 37%, 0.623);
+    position: absolute;
+    border-radius: 10px 10px 0 0;
+    }
+
+    .content{
+        margin: 0;
+        margin: 25px 25px 0 25px;
+        text-align: center;
+        
+        
+    }
+
+    ul{
+        position: relative;
+        clear: both;
+        list-style: none;
+        margin: 15px;
+    }
+    
+    .lista{
+        text-align: center;
+        margin: auto;
+        max-width: fit-content;
+    }
+    .direita{
+        padding-right: 0;
+    }
+    
 }
